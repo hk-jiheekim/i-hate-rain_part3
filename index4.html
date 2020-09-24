@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>나는 비가싫어</title>
+
+	<style type="text/css">
+		@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		body::-webkit-scrollbar{display: none;}
+		body, h1, p{margin: 0; padding: 0; }
+		body{ background-color: #676767; overflow-y: hidden;}
+		.map2{height:100px; }
+		.wrap{width: 100%; height:100%;  position: relative; padding-top: 100%;  font-family: 'BMJUA'; background-color: #676767;}
+	
+		.rain{width: 5px; height: 40px; position: fixed; background: #6f9dcc; z-index: 994;
+			animation: rr 1s infinite ease-in; }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 110%;} to{bottom: 0%;}}
+	
+		.wrap img{position: absolute; }
+		#img1{ width: 350%; height: 51%; max-height: 70%; left: 0%; top: -9%; z-index: 990;}
+		#img2 {width: 300%; height: 20%; top: -10%; ; left: 30%; z-index: 995; }
+		#walk{position: fixed; width: 20%; height: 40%; top: 65%; z-index: 999; left: 35%;}
+		#ha{font-size: 180%; z-index: 999; position: absolute; top: -2%; left: 5%; color:white; text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;}
+		
+		.sh{ left:299%;  width: 32%; height: 26.5%;  margin-top: 27%; z-index: 995; top: -12%; opacity: 0;}
+		.sh:hover {opacity: 0.7;}
+	</style>
+
+</head>
+<body id="back">
+	<section class="map2">
+	</section>
+
+	<section class="wrap">
+
+		<div class="rain" id="tt"></div>
+		<h1 id="ha">*집으로 돌아가자!</h1>
+
+		<img src="img3/d.png" class="ab" id="img1">
+		<img src="img3/dd.png" class="aa" id="img2">
+		<a href=""><img src="img3/d_1.png" id="sch" class="sh"></a>
+		<img src="img3/i.gif" id="walk">
+
+	<div id="monitor"></div>
+
+	</section>
+
+	<section class="map2">
+	</section>
+<script type="text/javascript">
+	for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+
+			window.onkeydown = function(){
+		if (event.keyCode == 37){
+			walk.src = "img3/i.gif";
+			walk.style.transform = "rotateY(180deg)";
+		}
+		else if (event.keyCode == 39){
+			walk.src = "img3/i.gif";
+			walk.style.transform = "rotateY(0deg)";
+		}
+
+	}
+</script>
+</body>
+</html>

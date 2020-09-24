@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>나는 비가 싫어</title>
+</head>
+<style type="text/css">
+	@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+	body, h1, p{margin: 0; padding: 0;  }
+
+		.map2{height:10%; ;}
+		.wrap{width: 100%; height:100%;  position: relative;  }
+
+		body::-webkit-scrollbar{display: none;}
+		body{font-family: 'BMJUA', sans-serif; position: relative; }
+	 	#back{background: url(img3/back.png); background-size: cover; background-attachment: fixed; position: relative; }
+
+
+
+    	#ta{position: absolute; width: 100%;padding-top: 15.5%; z-index: 999;}
+
+
+	 	table, td, th {border: 7px #707070; }
+
+
+	 	table{border-collapse: collapse; z-index: 999; width: 90%; margin: auto; }
+	 	td{border: 7px  #707070; border-style: dotted;  text-align: center; z-index: 999; text-align: center;}
+    	td img{width: 100%; z-index: 999;}
+
+    	.a2:hover{opacity: 0.6;}
+    	.b2:hover{opacity: 0.6;}
+    	.c2:hover{opacity: 0.6;}
+    	.d2:hover{opacity: 0.6;}
+
+    	.e2:hover{opacity: 0.6;}
+    	.f2:hover{opacity: 0.6;}
+    	.g2:hover{opacity: 0.6;}
+    	.h2:hover{opacity: 0.6;}
+
+		 #ha{position: absolute; left: 29%; padding-top: 5%;  z-index: 999;font-size: 270%; color:white; text-shadow: -3px 0 black, 0 4px black, 4px 0 black, 0 -4px black;}
+
+		 .nbb{position: absolute; left:45%; top: 105%;}
+		 .nbb:hover{opacity: 0.6;}
+
+
+
+</style>
+<body id="back">
+	<section class="map2">
+	</section>
+
+	<section class="wrap">
+	<h1 id="ha">사람들을 클릭해 달라진 모습을 확인해보세요!</h1>
+	<div class="pan" style="position: absolute; width: 95%; margin-top: 13%; padding-top: 50%; background-color: white;  opacity: 0.7; z-index: 880; left: 2.5%; "></div>
+
+		<div id="ta">
+		<table >
+			<tr>
+				
+				<td><img src="img3/2.png" id="b1" class="b2"></td>
+				<td><img src="img3/1.png" id="a1" class="a2"></td>
+				<td><img src="img3/7.png" id="c1" class="c2"></td>
+				<td><img src="img3/6.png" id="d1" class="d2"></td>
+			</tr>
+			
+			<tr>
+				<td><img src="img3/4.png" id="e1" class="e2"></td>
+				<td><img src="img3/5.png" id="f1" class="f2"></td>
+				<td><img src="img3/3.png" id="g1" class="g2"></td>
+				<td><img src="img3/8.png" id="h1" class="h2"></td>
+			
+			</tr>
+
+		</div>	
+
+			
+			
+		</table>
+
+		<a href="./index2.html"> <img src="img3/next.png" id="nb" class="nbb"></a>
+
+	</section>
+
+	<section class="map2">
+	</section>
+
+	<script type="text/javascript">
+		var a1state ="off";
+		a1.onclick=function(){
+			if(a1state =="off"){
+			a1.src = "img3/1_2.png";
+			a1state = "on";}
+			else{
+				a1.src = "img3/1.png";
+				a1state = "off";}}
+
+		var b1state ="off";
+		b1.onclick=function(){
+			if(b1state =="off"){
+			b1.src = "img3/2_2.png";
+			b1state = "on";}
+			else{
+				b1.src = "img3/2.png";
+				b1state = "off";}}
+
+		var c1state ="off";
+		c1.onclick=function(){
+			if(c1state =="off"){
+			c1.src = "img3/7_2.png";
+			c1state = "on";}
+			else{
+				c1.src = "img3/7.png";
+				c1state = "off";}}
+
+
+	  var d1state ="off";
+		d1.onclick=function(){
+			if(d1state =="off"){
+			d1.src = "img3/6_2.png";
+			d1state = "on";}
+			else{
+				d1.src = "img3/6.png";
+				d1state = "off";}}
+
+	var e1state ="off";
+		e1.onclick=function(){
+			if(e1state =="off"){
+			e1.src = "img3/4_2.png";
+			e1state = "on";}
+			else{
+				e1.src = "img3/4.png";
+				e1state = "off";}}
+
+		var f1state ="off";
+		f1.onclick=function(){
+			if(f1state =="off"){
+			f1.src = "img3/5_2.png";
+			f1state = "on";}
+			else{
+				f1.src = "img3/5.png";
+				f1state = "off";}}
+
+		var g1state ="off";
+		g1.onclick=function(){
+			if(g1state =="off"){
+			g1.src = "img3/3_1.png";
+			g1state = "on";}
+			else{
+				g1.src = "img3/3.png";
+				g1state = "off";}}
+
+		var h1state ="off";
+		h1.onclick=function(){
+			if(h1state =="off"){
+			h1.src = "img3/8_2.png";
+			h1state = "on";}
+			else{
+				h1.src = "img3/8.png";
+				h1state = "off";}}
+	</script>
+
+</body>
+</html>

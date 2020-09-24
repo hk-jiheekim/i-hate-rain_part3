@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>i hate rain</title>
+	<style type="text/css">
+		@font-face { font-family: 'ImcreSoojin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		body, h1, p{margin: 0; padding: 0; overflow-y: hidden; overflow-x: hidden; }
+		.map2{height:100px; background:white;}
+		.wrap{width: 100%; height:100%;  position: relative; padding-top: 100%;  font-family: 'ImcreSoojin'; background-color: white;}
+
+		.rain{width: 5px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
+			animation: rr 1s infinite ease-in;  }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 800px;} to{bottom: 0px;}}
+
+		.wrap img{position: absolute; }
+		#img1{ width: 75%; height: 50%; max-height: 70%; left: 13%; top: -9%; }
+		#img2 {width: 75%; height: 13%; top: 29.3%; ; left: 12%; z-index: 995; }
+		#img3{width: 4%; top: 33.5%; left: 77%; z-index: 996;}
+		.an:hover{opacity: 0.5;}
+
+		#p1{position: absolute; font-size: 180%; top: 34.5%; left: 20%; z-index: 997; text-align: left; line-height: 1.6;  }
+	</style>
+</head>
+<body>
+	<section class="map2">
+	</section>
+
+	<section class="wrap">
+		<div class="rain" id="tt"></div>
+
+		<p id="p1">비싫이도 얼른 집에 가고 싶어졌습니다.<br>
+		 </p>
+		<a href="./index4.html"><img src="img3/next.png" class="an" id="img3"></a>
+		<img src="img3/bar.png" class="ab" id="img2">
+		<img src="img3/c.png" class="aa" id="img1">
+
+	</section>
+
+	<section class="map2">
+	</section>
+
+	<script type="text/javascript">
+		for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*45 +"px";
+			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+
+		
+		 
+	</script>
+
+</body>
+</html>

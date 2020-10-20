@@ -3,30 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
-	<title>나는 비가 싫어
+	<title>i hate rain
     </title>
+
+    <link rel="shortcut icon" href="/파비.ico" type="image/x-icon">
+    <link rel="icon" href="/파비.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="파비.ico" type="image/x-icon">
+    <link rel="icon" href="/파비.ico" type="image/x-icon">
+    
 		<style type="text/css">
 			
 			body{font-family: 'Jua', sans-serif; position: relative;}
-        .width500px{width: 850px; display: inline-block; position: absolute; z-index: 999; margin: auto; left: calc(50% - 400px); padding-top: 50px;}
+        .width500px{width: 850px; display: inline-block; position: absolute; z-index: 999; margin: auto; left: calc(50% - 400px); padding-top: 50px; }
         .center{text-align: center;}
         .alignRight{ font-size: 32px; }
 
-        h1{font-size: 3.1em; color:white; text-shadow: -3px 0 black, 0 4px black, 4px 0 black, 0 -4px black; z-index: 999; position: relative;  }
+        h1{font-size: 3.5em; color:white; text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black; z-index: 999; position: relative;  }
         
      body{background: url(img3/back.png); background-size: cover; background-attachment: fixed;}
         #menuTable{ font-size: 22px; z-index: 999; top: 200px;}
         #startBtn{border: none; color: white; background-color: #707070; width: 100px;padding: 7px; font-family: 'Jua', sans-serif; font-weight: bold; font-size: 22px;  margin-bottom: 10px; z-index: 999; }
-        #cardTable{border-collapse: collapse; z-index: 999;}
+        #cardTable{border-collapse: collapse; z-index: 999;cursor: pointer;}
         #cardTable td{border: 7px  #707070; border-style: dotted; width: 300px; height: 200px; text-align: center; z-index: 999;}
         #cardTable td img{max-width: 200px; z-index: 999;}
         #cardTable td span{font-size: 25pt; font-weight: bold; color: #707070; display: none; z-index: 999; }
         #countDown{background-color: #707070; color: white; font-size: 2.2em; padding: 15px; z-index: 999; opacity: 0.7; height: 40px;}
         #info{width: 850px; height: 500px; background-color: #DDDDDD; color: black; padding-top: 230px; z-index: 999; opacity: 0.5; font-size: 1.7em;}
-        #startBtn{opacity: 0.7; width: 150px; height: 50px; border-radius:0.5em; font-size: 1.2em;}
+        #startBtn{opacity: 0.7; width: 150px; height: 50px; border-radius:0.5em; font-size: 1.2em;cursor: pointer;}
 
         .nb{animation: nbo 25s ease;}
         .nb:hover{opacity: 0.7;}
+        
+        #startBtn:hover{opacity: 0.5;}
+
+        #img4{z-index: 9999; width: 12.5%; top: 90%; left:87%; opacity: 0.9; cursor: pointer; position: fixed;}
+        #img4:hover{opacity: 0.5;}
+
+        .of1{position: absolute; width: 7%; z-index: 999; margin-top: 18%; left:90%; cursor: pointer;  z-index: 999;}
+        .of1:hover{opacity: 0.5;}
+        
 
         @keyframes nbo{
             from{opacity: 0; z-index: 550;}
@@ -37,21 +52,27 @@
 		
 </head>
   <body class='center' id="back">
+    
+    
+
 
      <div class="pan" style="position: absolute; width: 950px; height: 1050px; background-color: white; top: 175px; opacity: 0.7; z-index: 880; left: calc(50% - 450px);"></div>
 
         <div class='width500px' >
+            <img src="img3/off.png" id="of" class="of1">
+        <audio src="song.mp3" loop id="aa" ></audio>
          <a href="./index_1.html"> <img class="nb" src="img3/next.png" style="position: absolute; top: 1210px; left: calc(50% - 50px);"></a> 
 
             <div>
                 <h1> 술집의 평화를 찾아주세요! </h1>
-            
+            <a href="https://hk-jiheekim.github.io/i-hate-rain_part1/"><img src="img3/logo.png" class="lo" id="img4"></a>
                
                 <table id='menuTable'>
                     <tr>
                         <td class='alignLeft'>
                             <button id='startBtn'>시작</button>
-                           <audio loop id="song">
+                           
+                           
         					
                         </td>
                         <td class='alignRight'>
@@ -76,6 +97,20 @@
        
 
   <script type="text/javascript">
+
+    var ofstate ="off";
+        of.onclick=function(){
+            if(ofstate =="off"){
+            of.src = "img3/on.png";
+            aa.play();
+            ofstate = "on";}
+            else{
+                of.src = "img3/off.png";
+                aa.pause();
+                ofstate = "off";}}
+
+
+
             // 게임 상태
             var gameState = '';
  
@@ -130,14 +165,13 @@
  
             // 게임 시작
             function startGame() {
-                var sec = 6;
+                var sec = 8;
                 
                 $('#info').hide(); // 안내 문구 가리기
                 scoreInit(); // 점수 초기화
                 setTable(); // 카드 배치
 
                
-                song.play();
                
 
                 

@@ -2,14 +2,18 @@
 <html>
 <head>
 	<title>i hate rain</title>
+	<link rel="shortcut icon" href="/파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
 	<style type="text/css">
 		@font-face { font-family: 'ImcreSoojin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 		body, h1, p{margin: 0; padding: 0; overflow-y: hidden; overflow-x: hidden; }
-		.map2{height:100px; background:white;}
-		.wrap{width: 100%; height:100%;  position: relative; padding-top: 100%;  font-family: 'ImcreSoojin'; background-color: white;}
-
-		.rain{width: 5px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
+		body{background-image: url(img3/bback.png); background-size: cover; background-attachment: fixed;}
+		.map2{height:100px; }
+		.wrap{width: 100%; height:100%;  position: relative; padding-top: 100%;  font-family: 'ImcreSoojin'; }
+		.rain{width: 3px; height: 30px; position: absolute; background: #6f9dcc; z-index: 999;
 			animation: rr 1s infinite ease-in;  }
 		.rain:hover{height: 400px;}
 		
@@ -20,6 +24,9 @@
 		#img2 {width: 75%; height: 13%; top: 29.3%; ; left: 12%; z-index: 995; }
 		#img3{width: 4%; top: 33.5%; left: 77%; z-index: 996;}
 		.an:hover{opacity: 0.5;}
+
+		#img4{z-index: 9999; width: 12.5%; top: 90%; left:87%; opacity: 0.9; cursor: pointer; position: fixed;}
+        #img4:hover{opacity: 0.5;}
 
 		#p1{position: absolute; font-size: 180%; top: 34.5%; left: 20%; z-index: 997; text-align: left; line-height: 1.6;  }
 	</style>
@@ -36,6 +43,7 @@
 		<a href="./index3.html"><img src="img3/next.png" class="an" id="img3"></a>
 		<img src="img3/bar.png" class="ab" id="img2">
 		<img src="img3/b.png" class="aa" id="img1">
+		<a href="https://hk-jiheekim.github.io/i-hate-rain_part1/"><img src="img3/logo.png" class="lo" id="img4"></a>
 
 	</section>
 
@@ -49,8 +57,8 @@
 			b.id = i;
 			b.clssName = "rain";
 			b.style.left = Math.random()*window.innerWidth + "px";
-			b.style.height = Math.random()*45 +"px";
-			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.height = Math.random()*30 +"px";
+			b.style.animationDuration = Math.random()*2.5 + "s";
 			b.style.background = "#6f9dcc";
 			
 			document.body.appendChild(b);
